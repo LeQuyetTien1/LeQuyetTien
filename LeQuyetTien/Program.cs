@@ -28,15 +28,16 @@ public class Program
                     st2.Create(ref n, ref st);
                     break;
                 case 2:
-                    st2.Sort(ref n, st);
+                    st2.Sort(ref n, ref st);
                     break;
                 case 3:
-
+                    st2.Display(ref n, ref st);
+                    break;
                 case 4:
-                    st2.Search(ref n, st);
+                    st2.Search(ref n, ref st);
                     break;
                 case 5:
-                    st2.Delete(ref n, st);
+                    st2.Delete(ref n, ref st);
                     break;
                 default:
                     Console.WriteLine("Exit Program");
