@@ -53,12 +53,12 @@ namespace LeQuyetTien
                     Console.WriteLine("Mark 1: " + st[i].Mark1);
                     Console.WriteLine("Mark 2: " + st[i].Mark2);
                     Console.WriteLine("Mark 3: " + st[i].Mark3);
-                    Console.WriteLine("Average mark: " + st[i].Avg);
+                    Console.WriteLine("Average mark: " + st[i].mark_AVG());
                     a= true;
                     break;
                 }
             }
-            if (a = false)
+            if (a == false)
             {
                 Console.WriteLine("Khong tim thay hoc sinh");
             }
@@ -105,7 +105,7 @@ namespace LeQuyetTien
                     break;
                 }
             }
-            if (a = false)
+            if (a == false)
             {
                 Console.WriteLine("Khong tim thay hoc sinh can chinh sua");
             }
@@ -119,7 +119,7 @@ namespace LeQuyetTien
             {
                 if (String.Compare(st[i].Id, id) == 0)
                 {
-                    for (int j = i; j < n; j++)
+                    for (int j = i; j < n-1; j++)
                     {
                         st[j] = st[j + 1];
                     }
@@ -135,7 +135,7 @@ namespace LeQuyetTien
             {
                 for(int j = i+1; j < n; j++)
                 {
-                    if (st[i].Avg >= st[j].Avg)
+                    if (st[i].mark_AVG() >= st[j].mark_AVG())
                     {
                         Student temp = st[i];
                         st[i] = st[j];
@@ -146,7 +146,7 @@ namespace LeQuyetTien
             Console.WriteLine("Danh sach hoc sinh sau khi sap xep diem la: ");
             for (int i = 0; i < n; i++)
             {
-                Console.WriteLine("Name: " + st[i].Name+", diem tb: " + st[i].Avg);             
+                Console.WriteLine("Name: " + st[i].Name+", diem tb: " + st[i].mark_AVG());             
             }
         }
         public void Display(ref int n, ref Student[] st)
@@ -163,7 +163,7 @@ namespace LeQuyetTien
                 Console.WriteLine("Mark 1: " + st[i].Mark1);
                 Console.WriteLine("Mark 2: " + st[i].Mark2);
                 Console.WriteLine("Mark 3: " + st[i].Mark3);
-                Console.WriteLine("Average mark: " + st[i].Avg);
+                Console.WriteLine("Average mark: " + st[i].mark_AVG());
             }
         }
     }

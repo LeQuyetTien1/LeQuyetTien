@@ -17,11 +17,11 @@ namespace LeQuyetTien
         public double Mark1 { get; set; }
         public double Mark2 { get; set; }
         public double Mark3 { get; set; }
-        public double Avg;
+       /* public double Avg;*/
         public double mark_AVG()
         {
-            Avg= (Mark1+Mark2+Mark3)/3;
-            return Avg;
+           
+            return (Mark1 + Mark2 + Mark3) / 3;
         }
     }
 }
